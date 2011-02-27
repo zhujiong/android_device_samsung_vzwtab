@@ -1,9 +1,9 @@
-# mount point	fstype    device    	device2        foptions fstype2 fsoptions2
+# mount     fstype      device                  device2     foptions            fstype2     fsoptions2
 
 /boot       bml         /dev/block/bml1
-/cache      rfs         /dev/block/stl11        nosuid nodev check=no
-/data       rfs         /dev/block/mmcblk0p2    nosuid nodev check=no
-/datadata   rfs         /dev/block/stl10        nosuid nodev check=no
-/recovery   mtd         /dev/block/bml8         NULL
+/cache      ext4        /dev/block/stl11        NULL        NULL                rfs         nosuid nodev check=no
+/data       ext4        /dev/block/mmcblk0p2    NULL        NULL                rfs         nosuid nodev check=no
+/datadata   ext4        /dev/block/stl10        NULL        NULL                rfs         nosuid nodev check=no
+/recovery   bml         /dev/block/bml8
 /sdcard     vfat        /dev/block/mmcblk1p1    /dev/block/mmcblk1
-/system     rfs      /dev/block/stl9         llw,check=no
+/system     ext4        /dev/block/stl9         NULL        NULL                rfs         llw,check=no
